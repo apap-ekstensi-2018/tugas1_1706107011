@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Add student</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<script src="/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="/css/selectize.css" />
+    <link rel="stylesheet" href="/css/bootstrap-datepicker3.standalone.css" />
+	<script src="/js/selectize.js"></script>
+	<script src="/js/bootstrap-datepicker.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+	<script src="/js/form-update.js"></script>
+
+</head>
+
+<body>
+
+<div th:replace="fragments/fragment :: header"></div>
+<h1 class="page-header">Tambah Mahasiswa</h1>
+
+    <form action="/mahasiswa/tambah/submit" method="post" id="formAdd">
+       	<table border="1" class="table table-striped table-bordered">
+		<tbody>
+			<tr>
+				<td style="padding-right:10px;"><label for="nama">Nama Lengkap</label></td>
+				<td>                    <input type="text" class="form-control" id="nama" name="nama" required="required" />
+</td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="tempat_lahir">Tempat Lahir</label></td>
+				<td><input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" required="required" />
+                </td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="tanggal_lahir">Tanggal Lahir</label></td>
+				<td><input type="text" class="form-control" name="tanggal_lahir" id="tanggal_lahir" required="required"/>
+                </td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="jenis_kelamin">Jenis Kelamin</label></td>
+				<td><select class="form-control" id="jenis_kelamin" name="jenis_kelamin" ></select>
+                </td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="agama">Agama</label></td>
+				<td>
+					<select class="form-control" name="agama" id="agama"></select>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="golongan_darah">Golongan Darah</label></td>
+				<td>
+					 <select class="form-control" name="golongan_darah" id="golongan_darah" ></select>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="tahun_masuk">Tahun Masuk</label></td>
+				<td><input type="text" class="form-control" name="tahun_masuk" id="tahun_masuk" required="required"/>
+                </td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="jalur_masuk" >Jalur Masuk</label></td>
+				<td>
+					<select name="jalur_masuk" class="form-control" id="jalur_masuk"></select>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-right:10px;"><label for="id_prodi">Id Program Studi</label></td>
+				<td><input type="text" class="form-control" name="id_prodi" id="id_prodi" required="required"/>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+		    <button type="submit" name="action" value="save" class="btn btn-default">Simpan</button>
+	
+    </form>
+
+
+</body>
+</html>
